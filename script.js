@@ -130,3 +130,21 @@ function lowestPricePhone(phones) {
 }
 const lowPricePhone = lowestPricePhone(phones);
 console.log(lowPricePhone);
+
+const shoping = [
+  { name: "Pant", price: 400, quantity: 3 },
+  { name: "shirt", price: 350, quantity: 5 },
+  { name: "Sunglass", price: 200, quantity: 1 },
+  { name: "Shoe", price: 1700, quantity: 2 },
+];
+
+function getTotalPrice(products) {
+  let sum = 0;
+  for (const product of products) {
+    let singlePrice = product.price * product.quantity;
+    sum += singlePrice;
+  }
+  return sum;
+}
+const productsTotalPrice = getTotalPrice(shoping);
+console.log(productsTotalPrice);
