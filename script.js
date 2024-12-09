@@ -59,3 +59,74 @@ function woodNeeded(chairQuantity, tableQuantity, bedQuantity) {
 
 const totalWood = woodNeeded(4, 0, 1);
 console.log(`${totalWood} CFT wood needed for making your furniture`);
+
+const prices = [10000, 20000, 34000, 100000, 5700, 9000, 9840];
+
+function getMin(prices) {
+  let min = prices[0];
+  for (const price of prices) {
+    if (price < min) {
+      min = price;
+    }
+  }
+  return min;
+}
+const minPrice = getMin(prices);
+console.log(minPrice);
+
+const phones = [
+  {
+    name: "Apple",
+    price: 140000,
+    model: "15 Pro Max",
+    varient: "usa",
+    warrenty: "1 year",
+  },
+  {
+    name: "Oppo",
+    price: 41000,
+    model: "Reno 10",
+    varient: "India",
+    warrenty: "1 year",
+  },
+  {
+    name: "Vivo",
+    price: 27000,
+    model: "Y27",
+    varient: "India",
+    warrenty: "1 year",
+  },
+  {
+    name: "xoami",
+    price: 33000,
+    model: "Redmi note 12",
+    varient: "India",
+    warrenty: "1 year",
+  },
+  {
+    name: "Google",
+    price: 530000,
+    model: "Pixel 7 pro",
+    varient: "usa",
+    warrenty: "1 year",
+  },
+  {
+    name: "Samsung",
+    price: 77000,
+    model: "S22 Ultra",
+    varient: "Japan",
+    warrenty: "1 year",
+  },
+];
+
+function lowestPricePhone(phones) {
+  let minPrice = phones[0];
+  for (const phone of phones) {
+    if (phone.price < minPrice.price) {
+      minPrice = phone;
+    }
+  }
+  return minPrice;
+}
+const lowPricePhone = lowestPricePhone(phones);
+console.log(lowPricePhone);
